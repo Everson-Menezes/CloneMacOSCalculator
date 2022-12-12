@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class Memory {
   String _value = "0";
 
@@ -10,9 +12,13 @@ class Memory {
       clearMemory();
     } else if (value == "<=") {
       clearLast();
+    } else if (value == "=") {
+      calculate(_value);
     } else if (_value[0] == "0" && _value.length == 1) {
       _value = value;
-    } else {
+    } else if (!valueIsNumber(value) && valueIsNumber(_value[_value.length - 1])) {
+      _value += value;
+    } else if (valueIsNumber(value)) {
       _value += value;
     }
   }
@@ -28,6 +34,17 @@ class Memory {
     }
     if (_value == "") {
       _value = "0";
+    }
+  }
+
+  void calculate(String array) {}
+
+  bool valueIsNumber(String value) {
+    List<int> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    if (numbers.contains(int.tryParse(value))) {
+      return true;
+    } else {
+      return false;
     }
   }
 }
