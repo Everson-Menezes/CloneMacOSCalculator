@@ -4,9 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point to learn how a Flutter application is it develop.
-
-This is my a technical playground to learn Flutter.
+This project is a starting point to learn how a Flutter application is it develop as well as a technical playground to learn dart language.
 
 A few resources to get you started if this is your first Flutter project:
 
