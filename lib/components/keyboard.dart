@@ -12,7 +12,7 @@ class KeyBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 540,
+      height: 500,
       child: Column(
         children: <Widget>[
           ButtonRow([

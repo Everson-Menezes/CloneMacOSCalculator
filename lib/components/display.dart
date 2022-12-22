@@ -4,8 +4,9 @@ import 'package:auto_size_text/auto_size_text.dart';
 
 class Display extends StatelessWidget {
   final String text;
+  final bool newTextColor;
 
-  Display(this.text);
+  Display(this.text, this.newTextColor);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class Display extends StatelessWidget {
                   fontWeight: FontWeight.w100,
                   decoration: TextDecoration.none,
                   fontSize: 75,
-                  color: Colors.white,
+                  color: this.newTextColor ? Color.fromARGB(255, 179, 155, 155) : Colors.white,
                 ),
               ),
             ),

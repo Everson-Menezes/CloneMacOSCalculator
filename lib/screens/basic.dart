@@ -22,8 +22,13 @@ class _CalculatorAppState extends State<CalculatorApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Column(
-        children: <Widget>[
-          Display(memory.getValue()),
+        children: [
+          Column(
+            children: <Widget>[
+              Row(children: [Display(memory.getHistoryValue(), true)]),
+              Row(children: [Display(memory.getValue(), false)]),
+            ],
+          ),
           KeyBoard(_action),
         ],
       ),
